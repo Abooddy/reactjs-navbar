@@ -12,11 +12,11 @@ npm install --save reactjs-navbar
 
 ## Demo
 
-Try out the navbar by [clicking here](http://google.com "clicking here"). :tw-1f600:
+Try out the navbar by [clicking here](https://react-yeurin.stackblitz.io/ "clicking here").
 
 ## Usage
 
-Below is a comprehensive exmaple of how to use the component. Details are further explained afterwards.
+Below is a comprehensive example of how to use the component. Details are further explained afterwards.
 
 ```jsx
 import React, { Component } from "react";
@@ -173,7 +173,7 @@ The above will give you some thing like this:
 
 ## Logo
 
-The logo is an image object and it is optional, execlude the ~~logo~~ prop to remove it.
+The logo is an image object or an URL and it is optional, exclude the ~~logo~~ prop to remove it.
 
 ```jsx
 import logo from "./logo.png";
@@ -206,7 +206,7 @@ import Loader from "react-loader-spinner";
 
 ## Helper
 
-The helper appears at the right of the navbar, when clicked, the _helpCallback_ function prop is executed. The helper is optional and can be removed be removing the ~~helpCallback~~ prop.
+The helper appears at the right of the navbar, when clicked, the _helpCallback_ function prop is executed. The helper is optional and can be removed by removing the ~~helpCallback~~ prop.
 
 ```jsx
 <Navbar
@@ -246,7 +246,7 @@ The menu items array consists of all the main menu, sub menus and sub-sub menus 
 
 ### Title and Icon
 
-What will be showed as the item text. The icon is a font awesome object, please see the dependecies section for more information about font awesome.
+What will be shown as the item text. The icon is a font awesome object, please see the dependencies section for more information about font awesome.
 
 ```jsx
 import {  faUsers  } from "@fortawesome/free-solid-svg-icons";
@@ -337,6 +337,54 @@ An item can have a similar array as its own prop to render its own sub menu.
 		/* ... */
 	}
 ```
+
+## CSS Customization
+
+To customize the navbar, you can override the styles by using a local .css file. The navbar isolates the most common styles as CSS variables. I recommened changing them for best results.
+
+1. Create a local .css file.
+2. Add the :root pseudo-class.
+3. Override the varaiables.
+
+```css
+:root {
+  --pcol: black;
+  --scol: green;
+  --tspeed: 0.5s;
+  --base-scale: 1.1;
+  --subMenu-width: 12.25rem;
+
+  --fgrad: linear-gradient(
+    139deg,
+    rgba(51, 51, 51, 1) 16%,
+    rgb(136, 44, 44) 52%,
+    rgba(51, 51, 51, 1) 88%
+  );
+  --sgrad: linear-gradient(
+    139deg,
+    rgba(51, 51, 51, 1) 16%,
+    rgb(129, 28, 129) 76%,
+    rgba(51, 51, 51, 1) 100%
+  );
+
+  --rm-font-size: 0.875rem;
+  --sm-font-size: 0.65rem;
+}
+```
+
+### CSS Variables
+
+| Name            | Description                                                      |
+| --------------- | ---------------------------------------------------------------- |
+| --pcol          | Primary Color - Main theme color                                 |
+| --scol          | Secondary Color - Secondary theme color                          |
+| --tspeed        | Transition Speed - How fast transitions happen                   |
+| --base-scale    | Base Scale - How large elements gets when hovered on             |
+| --subMenu-width | Width of sub menus and sub-sub menus                             |
+| --fgrad         | First Gradient - Gradient of the navbar when not hovering on it  |
+| --sgrad         | Second Gradient - Gradient of the navbar when hovering on it     |
+| --rm-font-size  | Root Menu Font Size - Font size of the main menu                 |
+| --sm-font-size  | Sub Menu Font Size - Font size of the sub menu and sub-sub menus |
 
 ## License
 
