@@ -6,6 +6,7 @@
   "dependencies": {
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
+    "react-loader-spinner": "^3.1.14",
     "react-scripts": "file:../node_modules/react-scripts",
     "reactjs-navbar": "file:.."
   },
