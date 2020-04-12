@@ -12,7 +12,7 @@ npm install --save reactjs-navbar
 
 ## Demo
 
-Try out the navbar by [clicking here](https://react-yeurin.stackblitz.io/ "clicking here").
+Try out the navbar by opening both [this](https://react-yeurin.stackblitz.io/ "this") and [this](https://stackblitz.com/edit/react-yeurin/ "this").
 
 ## Usage
 
