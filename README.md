@@ -29,14 +29,14 @@ import {
   faBookOpen,
   faGlobe,
   faChartPie,
-  faCogs /*...*/
+  faCogs /*...*/,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "reactjs-navbar/dist/index.css";
 
 class App extends Component {
   state = {
-    isLoading: false
+    isLoading: false,
   };
 
   render() {
@@ -56,7 +56,7 @@ class App extends Component {
             onClick: () => {
               // What you want to do...
               alert("Its coffee time...");
-            }
+            },
           },
           {
             title: "Transactions",
@@ -64,12 +64,12 @@ class App extends Component {
             isAuth: () => {
               // Claim authorization logic...
               return false;
-            }
+            },
           },
           {
             title: "Networks",
             icon: faGlobe,
-            isAuth: true
+            isAuth: true,
           },
           {
             title: "Settings",
@@ -83,7 +83,7 @@ class App extends Component {
                 onClick: () => {
                   // What you want to do...
                   alert("I need another cup of coffee...");
-                }
+                },
               },
               {
                 title: "Subitem 2",
@@ -104,31 +104,31 @@ class App extends Component {
                           {
                             title: "Subitem 2-2-2-1",
                             icon: faFan,
-                            isAuth: true
+                            isAuth: true,
                           },
                           {
                             title: "Subitem 2-2-2-2",
                             icon: faCarSide,
-                            isAuth: true
+                            isAuth: true,
                           },
                           {
                             title: "Subitem 2-2-2-3",
                             icon: faJedi,
-                            isAuth: true
+                            isAuth: true,
                           },
                           {
                             title: "Subitem 2-2-2-4",
                             icon: faLaughBeam,
-                            isAuth: true
-                          }
-                        ]
+                            isAuth: true,
+                          },
+                        ],
                       },
                       {
                         title: "Subitem 2-2-2",
                         icon: faKey,
-                        isAuth: true
-                      }
-                    ]
+                        isAuth: true,
+                      },
+                    ],
                   },
                   {
                     title: "Make request",
@@ -141,9 +141,9 @@ class App extends Component {
                           this.setState({ isLoading: false });
                         }, 3000)
                       );
-                    }
-                  }
-                ]
+                    },
+                  },
+                ],
               },
               {
                 title: "Subitem 3",
@@ -151,15 +151,15 @@ class App extends Component {
                 isAuth: () => {
                   // Claim authorization logic...
                   return false;
-                }
-              }
-            ]
+                },
+              },
+            ],
           },
           {
             title: "Reports",
             icon: faChartPie,
-            isAuth: true
-          }
+            isAuth: true,
+          },
         ]}
       />
     );
@@ -169,7 +169,7 @@ class App extends Component {
 
 The above will give you some thing like this:
 
-[![Showcase](https://i.ibb.co/rkGpqBX/reactjs-navbar-showcase.png "Showcase")](https://i.ibb.co/rkGpqBX/reactjs-navbar-showcase.png "Showcase")
+[![Showcase](https://i.ibb.co/vL1RwXX/reactjs-navbar.gif "Showcase")](https://i.ibb.co/vL1RwXX/reactjs-navbar.gif "Showcase")
 
 ## Logo
 
